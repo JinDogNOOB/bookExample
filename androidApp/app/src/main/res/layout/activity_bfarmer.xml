@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:text="도축업자 기능"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:id="@+id/a_bfarmer_addmeat_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소 도축하기"/>
+    <Button
+        android:id="@+id/a_bfarmer_divmeat_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="고기 분할하기"/>
+
+</LinearLayout>

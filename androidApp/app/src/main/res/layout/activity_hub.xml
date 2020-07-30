@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:text="허브"
+        android:background="@color/colorAccent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorAccent">
+    <ImageView
+        android:id="@+id/a_hub_myid_qr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+   <Button
+       android:id="@+id/a_hub_goto_trace_button"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="고기 이력 추적"/>
+    <Button
+        android:id="@+id/a_hub_goto_farmer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="축산업자 기능"/>
+    <Button
+        android:id="@+id/a_hub_goto_butcher_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="도축업자 기능"/>
+    <Button
+        android:id="@+id/a_hub_goto_admin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADMIN 기능"/>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+=============== Jan 27, 2020 (KST) ===============
+23:41:26.587622 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:41:26.601622 db@open opening
+23:41:26.602259 version@stat F·[] S·0B[] Sc·[]
+23:41:26.616176 db@janitor F·2 G·0
+23:41:26.616241 db@open done T·14.5834ms
+23:41:26.618648 db@close closing
+23:41:26.618855 db@close done T·205.7µs

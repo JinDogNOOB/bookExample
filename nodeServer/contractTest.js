@@ -5,7 +5,9 @@ const myAddress="0x68c6c47c61dd5f168dfc4593096229d0ddd1b300"
 
 async function test(){
     try{
-    console.log("myAddress =" + myAddress)
+    console.log("myAddress =" + myAddress);
+    console.log("myAddress =" + randomString());
+
     
     momPtr = randomString();
     dadPtr = randomString();

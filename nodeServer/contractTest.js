@@ -48,12 +48,6 @@ async()=>{
 
 
 
-
-
-
-
-
-
 function randomString() {
     var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
     var string_length = 32;
@@ -65,3 +59,5 @@ function randomString() {
     //document.randform.randomfield.value = randomstring;
     return randomstring;
     }
+
+    test();

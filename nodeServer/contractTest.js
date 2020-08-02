@@ -9,7 +9,7 @@ async function test(){
     console.log("myAddress =" + randomString());
 
     let aaa = await contract.methods.getCow("asd").call();
-    console.log("테스트" + aaa)
+    console.log("테스트" + String(aaa));
 
 
     momPtr = randomString();

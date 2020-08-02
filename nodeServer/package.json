@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "web3": "^1.2.11"
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "web3": "^1.2.11",
+    "express": "^4.17.1"
   }
 }

@@ -1,16 +1,12 @@
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('./config/CowTraceAbility');
 const contract = CowTraceAbility.getContract();
-const myAddress="0x68C6C47C61Dd5f168dfC4593096229D0ddd1B300"
+const myAddress="0x68C6C47C61Dd5f168dfC4593096229D0ddd1B300";
 
 async function test(){
     try{
     console.log("myAddress =" + myAddress);
     console.log("myAddress =" + randomString());
-
-    let aaa = await contract.methods.getCow("asd").call();
-    console.log("테스트" + aaa[2]);
-
 
     momPtr = randomString();
     dadPtr = randomString();
@@ -20,7 +16,7 @@ async function test(){
     tempMeatPtrForDiv = randomString();
 
     console.log("어미소 추가 및 정보 확인");
-    let result = await contract.methods.addCow(momPtr, 'n', 'nc', 'owner', 'mom').send({from : '0x68C6C47C61Dd5f168dfC4593096229D0ddd1B300'});
+    let result = await contract.methods.addCow(momPtr, 'n', 'nc', 'owner', 'mom').send({from : myAddress});
     result = await contract.methods.getCow(momPtr).call();
     console.log("어미소 추가 및 정보 확인 완료" + result[0] + ":" + result[1] + ":" + result[2]);
 

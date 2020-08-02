@@ -8,7 +8,7 @@ const secret = crypto.createHash('sha256').update(randomString()).digest();
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('../config/CowTraceAbility');
 const contract = CowTraceAbility.getContract();
-const myAddress="0x68c6c47c61dd5f168dfc4593096229d0ddd1b300"
+const myAddress="0x68C6C47C61Dd5f168dfC4593096229D0ddd1B300";
 
 // Async Wrapper 에러처리 try catch를 신경안쓸수 있게 해주는거
 const wrap = asyncFn => {

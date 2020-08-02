@@ -2,8 +2,7 @@
 
 
 function test(){
-// 임시 키 생성 jwt 용
-const secret = crypto.createHash('sha256').update(randomString()).digest();
+
 
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('./config/CowTraceAbility');

@@ -8,6 +8,7 @@ const secret = crypto.createHash('sha256').update(randomString()).digest();
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('../config/CowTraceAbility');
 const contract = CowTraceAbility.getContract();
+const myAddress = CowTraceAbility.myAddress;
 
 // Async Wrapper 에러처리 try catch를 신경안쓸수 있게 해주는거
 const wrap = asyncFn => {
@@ -237,7 +238,7 @@ module.exports = function(app, connection)
                     let ownerPtr = req.body.ownerptr;
                     let desc = req.body.desc;
 
-                    let result = await contract.methods.addCow(cowPtr, momPtr, dadPtr, ownerPtr, desc).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                    let result = await contract.methods.addCow(cowPtr, momPtr, dadPtr, ownerPtr, desc).send({from : myAddress});
 
                     let cows = {
                         OWNERKEY : req.body.ownerptr,
@@ -282,7 +283,7 @@ module.exports = function(app, connection)
                 let weight = req.body.weight;
                 let desc = req.body.desc;
 
-                await contract.methods.butcherCow(meatPtr, workerPtr, cowPtr, weight, desc).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                await contract.methods.butcherCow(meatPtr, workerPtr, cowPtr, weight, desc).send({from : myAddress});
                 res.send({
                     resultCode:true,
                     meatPtr : meatPtr
@@ -315,7 +316,7 @@ module.exports = function(app, connection)
                 let weight = req.body.weight;
                 let desc = req.body.desc;
 
-                await contract.methods.divideMeat(meatPtr, workerPtr, pMeatPtr, weight, desc).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                await contract.methods.divideMeat(meatPtr, workerPtr, pMeatPtr, weight, desc).send({from : myAddress});
                 res.send({
                     resultCode:true,
                     meatPtr : meatPtr
@@ -396,7 +397,7 @@ module.exports = function(app, connection)
             if(decoded.usertype == 99){
 
                 let cowPtr = req.body.cowptr;
-                await contract.methods.cowDied(cowPtr).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                await contract.methods.cowDied(cowPtr).send({from : myAddress});
                 return res.json({
                     resultCode : true
                 });
@@ -425,7 +426,7 @@ module.exports = function(app, connection)
             
 
             let meatPtr = req.body.meatptr;
-            await contract.methods.meatSelled(meatPtr).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+            await contract.methods.meatSelled(meatPtr).send({from : myAddress});
             return res.json({
                 resultCode : true
             });
@@ -451,7 +452,7 @@ module.exports = function(app, connection)
                 let cowPtr = req.body.cowptr;
                 let desc = req.body.desc;
 
-                await contract.methods.changeCowDesc(cowPtr, desc).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                await contract.methods.changeCowDesc(cowPtr, desc).send({from : myAddress});
                 return res.json({
                     resultCode : true
                 });
@@ -483,7 +484,7 @@ module.exports = function(app, connection)
                 let meatPtr = req.body.meatptr;
                 let desc = req.body.desc;
 
-                await contract.methods.changeMeatDesc(meatPtr, desc).send({from : "0x642fd1b53daffcf27db09e8441219d2adb92bf74"});
+                await contract.methods.changeMeatDesc(meatPtr, desc).send({from : myAddress});
                 return res.json({
                     resultCode : true
                 });

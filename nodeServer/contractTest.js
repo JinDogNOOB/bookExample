@@ -21,7 +21,7 @@ async function test(){
 
     console.log("어미소 추가 및 정보 확인");
     let result = await contract.methods.getMeat("aaa").call();
-    result = await contract.methods.addCow(momPtr, "n", "n", "owner", "mom").send({from : myAddress});
+    result = await contract.methods.addCow(momPtr, "n", "n", "owner", "mom").send({from : "0x68c6c47c61dd5f168dfc4593096229d0ddd1b300"});
     result = await contract.methods.getCow(momPtr).call();
     console.log("어미소 추가 및 정보 확인 완료" + result)
 

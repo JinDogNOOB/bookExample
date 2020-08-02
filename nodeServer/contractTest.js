@@ -1,8 +1,7 @@
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('./config/CowTraceAbility');
 const contract = CowTraceAbility.getContract();
-const myAddress = CowTraceAbility.myAddress;
-
+const myAddress="0x68c6c47c61dd5f168dfc4593096229d0ddd1b300"
 
 async function test(){
     try{

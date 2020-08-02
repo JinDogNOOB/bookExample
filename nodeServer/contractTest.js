@@ -6,7 +6,7 @@ const myAddress = CowTraceAbility.myAddress;
 
 async function test(){
     try{
-
+    console.log("myAddress =" + myAddress)
     
     momPtr = randomString();
     dadPtr = randomString();

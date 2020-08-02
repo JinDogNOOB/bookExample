@@ -1,5 +1,5 @@
 const Web3 = require('web3');
-const url = 'http://127.0.0.1:8545';
+const url = 'ws://127.0.0.1:8545';
 const web3 = new Web3(url);
 const contractAddress="0x1b6d34A796bDFE819A0B6Ee0148402EE21F19999";
 

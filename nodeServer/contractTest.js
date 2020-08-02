@@ -8,7 +8,10 @@ async function test(){
     console.log("myAddress =" + myAddress);
     console.log("myAddress =" + randomString());
 
-    
+    let aaa = await contract.methods.getCow("asd").call();
+    console.log("테스트" + aaa)
+
+
     momPtr = randomString();
     dadPtr = randomString();
     childPtr = randomString();

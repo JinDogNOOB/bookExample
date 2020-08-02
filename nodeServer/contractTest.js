@@ -1,15 +1,13 @@
-
-
-
-function test(){
-
-
 // 컨트랙트 객체 생성
 const CowTraceAbility = require ('./config/CowTraceAbility');
 const contract = CowTraceAbility.getContract();
 const myAddress = CowTraceAbility.myAddress;
 
-async()=>{
+
+async function test(){
+    try{
+
+    
     momPtr = randomString();
     dadPtr = randomString();
     childPtr = randomString();
@@ -42,8 +40,11 @@ async()=>{
     result = await contract.methods.divideMeat(tempMeatPtrForDiv, "worker", tempMeatPtr, 200, "divmeat").send({from : myAddress});
     result = await contract.methods.getMeat(tempMeatPtrForDiv).call();
     console.log("고기 분할 및 고기 정보 확인 완료" + result);
+    }catch(e){
+        console.log(e);
+    }
 }
-}
+
 
 
 
